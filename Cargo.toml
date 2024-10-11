@@ -13,12 +13,22 @@ edition = "2018"
 
 [dependencies]
 core-foundation = { version = "0.9", default-features = false }
-core-media = { version = "0.4", default-features = false, features = ["objc"] }
-core-video = { version = "0.3", default-features = false, features = ["objc"] }
+# core-media = { version = "0.4", default-features = false, features = ["objc"] }
+# core-video = { version = "0.3", default-features = false, features = ["objc"] }
+core-media = { version = "0.2", features = ["objc"] }
+core-video = { version = "0.2", features = ["objc"] }
 dispatch2 = "0.1"
 libc = "0.2"
 objc2 = "0.5"
-objc2-foundation = { version = "0.2", features = ["NSArray", "NSDictionary", "NSEnumerator", "NSError", "NSRange", "NSString", "NSValue"] }
+objc2-foundation = { version = "0.2", features = [
+    "NSArray",
+    "NSDictionary",
+    "NSEnumerator",
+    "NSError",
+    "NSRange",
+    "NSString",
+    "NSValue",
+] }
 
 [features]
 default = ["capture", "link"]
